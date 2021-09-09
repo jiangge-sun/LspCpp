@@ -2,7 +2,7 @@
 
 #include "LibLsp/JsonRpc/MessageJsonHandler.h"
 namespace lsp {
-	class ProtocolJsonHandler : public MessageJsonHandler
+	class __declspec(dllexport) ProtocolJsonHandler : public MessageJsonHandler
 	{
 	public:
 		ProtocolJsonHandler();

@@ -20,7 +20,7 @@ namespace lsp
 
    
 		
-        class websocket_stream_wrapper :public istream, public ostream
+        class __declspec(dllexport) websocket_stream_wrapper :public istream, public ostream
         {
         public:
 
@@ -55,7 +55,7 @@ namespace lsp
         };
 
         /// The top-level class of the HTTP server.
-        class WebSocketServer
+        class __declspec(dllexport) WebSocketServer
         {
         public:
             WebSocketServer(const WebSocketServer&) = delete;

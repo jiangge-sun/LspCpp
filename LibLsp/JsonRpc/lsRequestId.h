@@ -44,8 +44,8 @@ struct lsRequestId {
 		return  k_string < rhs.k_string;
 	}
 };
-void Reflect(Reader& visitor, lsRequestId& value);
-void Reflect(Writer& visitor, lsRequestId& value);
+void __declspec(dllexport) Reflect(Reader& visitor, lsRequestId& value);
+void __declspec(dllexport) Reflect(Writer& visitor, lsRequestId& value);
 
 // Debug method to convert an id to a string.
 std::string ToString(const lsRequestId& id);

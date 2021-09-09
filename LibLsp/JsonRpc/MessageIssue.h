@@ -4,12 +4,12 @@
 #include <vector>
 namespace lsp
 {
-	class Log
+	class __declspec(dllexport) Log
 	{
 	public:
 		virtual ~Log() = default;
 
-		enum class Level
+		enum class __declspec(dllexport) Level
 		{
 			/**
 			  * OFF is a special level that can be used to turn off logging.
@@ -136,7 +136,7 @@ namespace lsp
 	};
 }
 
-class MessageIssue {
+class __declspec(dllexport) MessageIssue {
 
 public:
 	std::string text;
@@ -169,7 +169,7 @@ public:
 	}
 
 };
-class  MessageIssueHandler
+class __declspec(dllexport) MessageIssueHandler
 {
 public:
 	/**

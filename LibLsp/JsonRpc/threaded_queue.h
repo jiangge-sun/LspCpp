@@ -53,7 +53,7 @@ struct MultiQueueLock {
   std::tuple<Queue...> tuple_;
 };
 
-struct MultiQueueWaiter {
+struct __declspec(dllexport) MultiQueueWaiter {
   static bool HasState(std::initializer_list<BaseThreadQueue*> queues);
 
   bool ValidateWaiter(std::initializer_list<BaseThreadQueue*> queues);

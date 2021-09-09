@@ -10,7 +10,7 @@ using  GenericRequestJsonHandler = std::function< std::unique_ptr<LspMessage>(Re
 using  GenericResponseJsonHandler = std::function< std::unique_ptr<LspMessage>(Reader&) >;
 using  GenericNotificationJsonHandler = std::function< std::unique_ptr<LspMessage>(Reader&) >;
 
-class MessageJsonHandler
+class __declspec(dllexport) MessageJsonHandler
 {
 public:
 	std::map< std::string, GenericRequestJsonHandler > method2request;

@@ -1,9 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MOHUB_CLIENT|Win32">
+      <Configuration>MOHUB_CLIENT</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MOHUB_CLIENT|x64">
+      <Configuration>MOHUB_CLIENT</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MOHUB_SERVER|Win32">
+      <Configuration>MOHUB_SERVER</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MOHUB_SERVER|x64">
+      <Configuration>MOHUB_SERVER</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
@@ -55,80 +71,104 @@
     <ProjectGuid>{F45A78DC-E57C-4AF6-8719-29833E3BFE07}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>LspCpp</RootNamespace>
-    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TCP_SERVER_EXAMPLE|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STDIO_SERVER_EXAMPLE|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STDIO_CLIENT_EXAMPLE|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WEBSOCKET_SERVER_EXAMPLE|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TCP_SERVER_EXAMPLE|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STDIO_SERVER_EXAMPLE|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STDIO_CLIENT_EXAMPLE|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WEBSOCKET_SERVER_EXAMPLE|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -152,6 +192,12 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='WEBSOCKET_SERVER_EXAMPLE|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -170,6 +216,12 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='WEBSOCKET_SERVER_EXAMPLE|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -177,9 +229,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>.\third_party\rapidjson\include;.\third_party\utfcpp\source;.\;.\third_party\threadpool;$(IncludePath)</IncludePath>
-    <OutDir>..\Our_lib_V3</OutDir>
-    <TargetName>LspCppMDD</TargetName>
-    <TargetExt>.lib</TargetExt>
+    <OutDir>../bin/win_msvc2017x86/Debug/</OutDir>
+    <TargetName>lsp_cpp_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TCP_SERVER_EXAMPLE|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -203,6 +254,18 @@
     <IncludePath>.\third_party\rapidjson\include;.\third_party\utfcpp\source;.\;.\third_party\threadpool;$(IncludePath)</IncludePath>
     <TargetName>WEBSOCKET_SERVER_EXAMPLE</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\third_party\rapidjson\include;.\third_party\utfcpp\source;.\;.\third_party\threadpool;$(IncludePath)</IncludePath>
+    <TargetName>Mohub_Client</TargetName>
+    <OutDir>../bin/win_msvc2017x86/Debug/</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\third_party\rapidjson\include;.\third_party\utfcpp\source;.\;.\third_party\threadpool;$(IncludePath)</IncludePath>
+    <TargetName>Mohub_Server</TargetName>
+    <OutDir>../bin/win_msvc2017x86/Debug/</OutDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -218,11 +281,18 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WEBSOCKET_SERVER_EXAMPLE|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\Our_lib_V3</OutDir>
+    <OutDir>..\Our_lib_V3\Release\x86\</OutDir>
     <TargetName>LspCppMD</TargetName>
     <IncludePath>.\third_party\rapidjson\include;.\third_party\utfcpp\source;.\;.\third_party\threadpool;$(IncludePath)</IncludePath>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -234,10 +304,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -255,6 +327,7 @@
       <ConformanceMode>false</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -272,6 +345,7 @@
       <ConformanceMode>false</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -289,6 +363,7 @@
       <ConformanceMode>false</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -302,14 +377,54 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;WEBSOCKET_SERVER_EXAMPLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WEBSOCKET_SERVER_EXAMPLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;MOHUB_CLIENT;_WIN32_WINNT=0x0601;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;../include/;../interface/;../interface/common_kits/;../interface/modelica_services/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../bin/win_msvc2017x64/Debug/quazipd.lib;../bin/win_msvc2017x64/Debug/mw_develop_d.lib;../bin/win_msvc2017x64/Debug/mw_class_manager_d.lib;../bin/win_msvc2017x64/lib/mw_runtime_d.lib;../bin/win_msvc2017x64/lib/modelica_compiler_d.lib;../bin/win_msvc2017x64/lib/mw_utilities_std_d.lib;../bin/win_msvc2017x64/Debug/mw_global_d.lib;../bin/win_msvc2017x64/Debug/z_zlib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;MOHUB_SERVER;_WIN32_WINNT=0x0601;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;../include/;../interface/;../interface/common_kits/;../interface/modelica_services/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../bin/win_msvc2017x64/Debug/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>../bin/win_msvc2017x64/Debug/quazipd.lib;../bin/win_msvc2017x64/Debug/mw_develop_d.lib;../bin/win_msvc2017x64/Debug/mw_class_manager_d.lib;../bin/win_msvc2017x64/lib/mw_runtime_d.lib;../bin/win_msvc2017x64/lib/modelica_compiler_d.lib;../bin/win_msvc2017x64/lib/mw_utilities_std_d.lib;../bin/win_msvc2017x64/Debug/mw_global_d.lib;../bin/win_msvc2017x64/Debug/z_zlib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -319,8 +434,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;./third_party/utfcpp/;./third_party/utfcpp/source/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>
+      </LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -336,6 +455,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -351,6 +471,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -366,6 +487,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -381,6 +503,39 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_CLIENT|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MOHUB_SERVER|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -396,10 +551,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WIN32_WINNT=0x0601;_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -417,8 +573,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;./network/;./third_party/;./third_party/threadpool/;./third_party/rapidjson/include/;./third_party/utfcpp/;./third_party/utfcpp/source/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -639,30 +797,30 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="packages\tencent.rapidjson.1.1.1\build\tencent.rapidjson.targets" Condition="Exists('packages\tencent.rapidjson.1.1.1\build\tencent.rapidjson.targets')" />
-    <Import Project="..\packages\boost.1.76.0.0\build\boost.targets" Condition="Exists('..\packages\boost.1.76.0.0\build\boost.targets')" />
-    <Import Project="..\packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets" Condition="Exists('..\packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets')" />
-    <Import Project="..\packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets" Condition="Exists('..\packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets')" />
-    <Import Project="..\packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets" Condition="Exists('..\packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets')" />
-    <Import Project="..\packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets" Condition="Exists('..\packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets')" />
-    <Import Project="..\packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets" Condition="Exists('..\packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets')" />
-    <Import Project="..\packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets" Condition="Exists('..\packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets')" />
-    <Import Project="..\packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets" Condition="Exists('..\packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets')" />
-    <Import Project="..\packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets" Condition="Exists('..\packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets')" />
-    <Import Project="..\packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets" Condition="Exists('..\packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets')" />
+    <Import Project="packages\boost.1.76.0.0\build\boost.targets" Condition="Exists('packages\boost.1.76.0.0\build\boost.targets')" />
+    <Import Project="packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets" Condition="Exists('packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets')" />
+    <Import Project="packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets" Condition="Exists('packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets')" />
+    <Import Project="packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets" Condition="Exists('packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets')" />
+    <Import Project="packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets" Condition="Exists('packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets')" />
+    <Import Project="packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets" Condition="Exists('packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets')" />
+    <Import Project="packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets" Condition="Exists('packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets')" />
+    <Import Project="packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets" Condition="Exists('packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets')" />
+    <Import Project="packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets" Condition="Exists('packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets')" />
+    <Import Project="packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets" Condition="Exists('packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\boost.1.76.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.76.0.0\build\boost.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets'))" />
-    <Error Condition="!Exists('..\packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost.1.76.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost.1.76.0.0\build\boost.targets'))" />
+    <Error Condition="!Exists('packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_chrono-vc141.1.76.0.0\build\boost_chrono-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_context-vc141.1.76.0.0\build\boost_context-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_coroutine-vc141.1.76.0.0\build\boost_coroutine-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_date_time-vc141.1.76.0.0\build\boost_date_time-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_filesystem-vc141.1.76.0.0\build\boost_filesystem-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_program_options-vc141.1.76.0.0\build\boost_program_options-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_regex-vc141.1.76.0.0\build\boost_regex-vc141.targets'))" />
+    <Error Condition="!Exists('packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_system-vc140.1.76.0.0\build\boost_system-vc140.targets'))" />
+    <Error Condition="!Exists('packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_thread-vc141.1.76.0.0\build\boost_thread-vc141.targets'))" />
   </Target>
 </Project>

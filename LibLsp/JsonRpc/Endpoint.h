@@ -12,7 +12,7 @@ using GenericResponseHandler = std::function< bool(std::unique_ptr<LspMessage>) 
 using GenericRequestHandler = std::function< bool(std::unique_ptr<LspMessage>) >;
 using GenericNotificationHandler = std::function< bool(std::unique_ptr<LspMessage>) >;
 
-class Endpoint
+class __declspec(dllexport) Endpoint
 {
 public:
 	virtual  ~Endpoint() = default;
@@ -24,7 +24,7 @@ public:
 	virtual  void registerNotifyHandler(const std::string&,  GenericNotificationHandler ) = 0;
 };
 
-class GenericEndpoint :public Endpoint
+class __declspec(dllexport) GenericEndpoint :public Endpoint
 {
 
 public:

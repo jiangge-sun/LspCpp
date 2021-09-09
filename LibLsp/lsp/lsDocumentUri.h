@@ -1,7 +1,7 @@
 #pragma once
 #include "LibLsp/JsonRpc/serializer.h"
 #include <string>
-struct lsDocumentUri {
+struct __declspec(dllexport) lsDocumentUri {
 	static lsDocumentUri FromPath(const AbsolutePath& path);
 
 	lsDocumentUri();
@@ -21,6 +21,6 @@ struct lsDocumentUri {
 		raw_uri_.swap(arg.raw_uri_);
 	}
 };
-extern void Reflect(Writer& visitor, lsDocumentUri& value);
-extern void Reflect(Reader& visitor, lsDocumentUri& value);
+extern void __declspec(dllexport) Reflect(Writer& visitor, lsDocumentUri& value);
+extern void __declspec(dllexport) Reflect(Reader& visitor, lsDocumentUri& value);
 extern   std::string  make_file_scheme_uri(const std::string& absolute_path);

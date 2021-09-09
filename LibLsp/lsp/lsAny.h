@@ -78,8 +78,8 @@ namespace lsp
 };
 
 
-extern void Reflect(Reader& visitor, lsp::Any& value);
-extern  void Reflect(Writer& visitor, lsp::Any& value);
+extern void __declspec(dllexport) Reflect(Reader& visitor, lsp::Any& value);
+extern  void __declspec(dllexport) Reflect(Writer& visitor, lsp::Any& value);
 
 template <typename T>
 void ReflectMember(std::map < std::string, lsp::Any>& visitor, const char* name, T& value) {

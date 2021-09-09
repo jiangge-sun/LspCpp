@@ -6,7 +6,7 @@
 #include "LibLsp/lsp/lsMarkedString.h"
 #include "LibLsp/lsp/lsTextDocumentPositionParams.h"
 
-extern  void Reflect(Reader& visitor, 
+extern  void __declspec(dllexport) Reflect(Reader& visitor, 
 	std::pair<boost::optional<std::string>, boost::optional<MarkupContent>>& value);
 
 

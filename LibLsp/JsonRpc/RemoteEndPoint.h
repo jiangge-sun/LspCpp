@@ -91,7 +91,7 @@ namespace lsp {
 }
 
 
-class RemoteEndPoint :MessageIssueHandler
+class __declspec(dllexport) RemoteEndPoint :MessageIssueHandler
 {
 
 	template <typename F, int N>

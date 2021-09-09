@@ -10,7 +10,7 @@
 #include "LibLsp/lsp/textDocument/SemanticTokens.h"
 
 
-extern void Reflect(Reader&, std::pair<boost::optional<lsTextDocumentSyncKind>, boost::optional<lsTextDocumentSyncOptions> >&);
+extern void __declspec(dllexport) Reflect(Reader&, std::pair<boost::optional<lsTextDocumentSyncKind>, boost::optional<lsTextDocumentSyncOptions> >&);
 
 /**
  * Code Action options.

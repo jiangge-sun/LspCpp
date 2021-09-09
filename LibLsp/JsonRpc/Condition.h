@@ -1,7 +1,7 @@
 #pragma once
 #include <condition_variable>
 template <class T>
-class Condition
+class __declspec(dllexport) Condition
 {
 public:
 

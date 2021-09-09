@@ -35,10 +35,10 @@ enum class TypeHierarchyDirection :  uint32_t{
 	  */
 	  Both=2
 };
-void Reflect(Reader& reader, TypeHierarchyDirection& value);
+void __declspec(dllexport) Reflect(Reader& reader, TypeHierarchyDirection& value);
 
 
-void Reflect(Writer& writer, TypeHierarchyDirection& value);
+void __declspec(dllexport) Reflect(Writer& writer, TypeHierarchyDirection& value);
 
 struct TypeHierarchyParams :public lsTextDocumentPositionParams
 {

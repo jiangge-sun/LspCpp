@@ -96,10 +96,10 @@ struct lsInitializeParams {
       trace, workspaceFolders, locale)
 };
 
-void Reflect(Reader& reader, lsInitializeParams::lsTrace& value);
+void __declspec(dllexport) Reflect(Reader& reader, lsInitializeParams::lsTrace& value);
 
 
-void Reflect(Writer& writer, lsInitializeParams::lsTrace& value);
+void __declspec(dllexport) Reflect(Writer& writer, lsInitializeParams::lsTrace& value);
 
 
 MAKE_REFLECT_STRUCT(lsInitializeParams,

@@ -25,7 +25,7 @@ struct JsonNull
 
 
 
-class Reader {
+class __declspec(dllexport) Reader {
 public:
 	virtual ~Reader() {}
 	virtual SerializeFormat Format() const = 0;
@@ -59,7 +59,7 @@ public:
 
 
 
-class Writer {
+class __declspec(dllexport) Writer {
 public:
 	virtual ~Writer() {}
 	virtual SerializeFormat Format() const = 0;
@@ -158,47 +158,47 @@ void swap(type& arg) noexcept{			\
 
 //// Elementary types
 
-void Reflect(Reader& visitor, uint8_t& value);
-void Reflect(Writer& visitor, uint8_t& value);
-
-void Reflect(Reader& visitor, short& value);
-void Reflect(Writer& visitor, short& value);
-
-void Reflect(Reader& visitor, unsigned short& value);
-void Reflect(Writer& visitor, unsigned short& value);
-
-void Reflect(Reader& visitor, int& value);
-void Reflect(Writer& visitor, int& value);
-
-void Reflect(Reader& visitor, unsigned& value);
-void Reflect(Writer& visitor, unsigned& value);
-
-void Reflect(Reader& visitor, long& value);
-void Reflect(Writer& visitor, long& value);
-
-void Reflect(Reader& visitor, unsigned long& value);
-void Reflect(Writer& visitor, unsigned long& value);
-
-void Reflect(Reader& visitor, long long& value);
-void Reflect(Writer& visitor, long long& value);
-
-void Reflect(Reader& visitor, unsigned long long& value);
-void Reflect(Writer& visitor, unsigned long long& value);
-
-void Reflect(Reader& visitor, double& value);
-void Reflect(Writer& visitor, double& value);
-
-void Reflect(Reader& visitor, bool& value);
-void Reflect(Writer& visitor, bool& value);
-
-void Reflect(Reader& visitor, std::string& value);
-void Reflect(Writer& visitor, std::string& value);
-
-void Reflect(Reader& visitor, JsonNull& value);
-void Reflect(Writer& visitor, JsonNull& value);
-
-void Reflect(Reader& visitor, SerializeFormat& value);
-void Reflect(Writer& visitor, SerializeFormat& value);
+void __declspec(dllexport) Reflect(Reader& visitor, uint8_t& value);
+void __declspec(dllexport) Reflect(Writer& visitor, uint8_t& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, short& value);
+void __declspec(dllexport) Reflect(Writer& visitor, short& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, unsigned short& value);
+void __declspec(dllexport) Reflect(Writer& visitor, unsigned short& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, int& value);
+void __declspec(dllexport) Reflect(Writer& visitor, int& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, unsigned& value);
+void __declspec(dllexport) Reflect(Writer& visitor, unsigned& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, long& value);
+void __declspec(dllexport) Reflect(Writer& visitor, long& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, unsigned long& value);
+void __declspec(dllexport) Reflect(Writer& visitor, unsigned long& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, long long& value);
+void __declspec(dllexport) Reflect(Writer& visitor, long long& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, unsigned long long& value);
+void __declspec(dllexport) Reflect(Writer& visitor, unsigned long long& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, double& value);
+void __declspec(dllexport) Reflect(Writer& visitor, double& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, bool& value);
+void __declspec(dllexport) Reflect(Writer& visitor, bool& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, std::string& value);
+void __declspec(dllexport) Reflect(Writer& visitor, std::string& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, JsonNull& value);
+void __declspec(dllexport) Reflect(Writer& visitor, JsonNull& value);
+ 
+void __declspec(dllexport) Reflect(Reader& visitor, SerializeFormat& value);
+void __declspec(dllexport) Reflect(Writer& visitor, SerializeFormat& value);
 
 //// Type constructors
 
@@ -326,7 +326,7 @@ void ReflectMember(Writer& visitor, const char* name, T& value) {
 }
 
 template<class _Ty1, class _Ty2>
-void Reflect(Writer& visitor, std::pair<  boost::optional<_Ty1>, boost::optional<_Ty2> >& value)
+void __declspec(dllexport) Reflect(Writer& visitor, std::pair<  boost::optional<_Ty1>, boost::optional<_Ty2> >& value)
 {
 	if (value.first)
 	{
@@ -362,7 +362,7 @@ void Reflect(Reader& visitor, std::pair<  boost::optional<std::string>, boost::o
 
 
 template<class _Ty1, class _Ty2>
-void Reflect(Reader& visitor, std::pair<  boost::optional<_Ty1>, boost::optional<_Ty2> >& value)
+void __declspec(dllexport) Reflect(Reader& visitor, std::pair<  boost::optional<_Ty1>, boost::optional<_Ty2> >& value)
 {
 	try
 	{
