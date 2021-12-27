@@ -11,6 +11,7 @@
 #include <utility>
 #include <vector>
 
+#include "../ProjConfig.h"
 
 struct MultiQueueWaiter;
 
@@ -53,7 +54,7 @@ struct MultiQueueLock {
   std::tuple<Queue...> tuple_;
 };
 
-struct __declspec(dllexport) MultiQueueWaiter {
+struct LSP_EXPORT MultiQueueWaiter {
   static bool HasState(std::initializer_list<BaseThreadQueue*> queues);
 
   bool ValidateWaiter(std::initializer_list<BaseThreadQueue*> queues);

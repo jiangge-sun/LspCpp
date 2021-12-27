@@ -5,8 +5,9 @@
 #include <iostream>
 #include <LibLsp/JsonRpc/serializer.h>
 #include "LibLsp/lsp/method_type.h"
+#include "../ProjConfig.h"
 
-struct __declspec(dllexport) LspMessage
+struct LSP_EXPORT LspMessage
 {
 public:
 	std::string jsonrpc = "2.0";

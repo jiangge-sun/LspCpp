@@ -5,8 +5,9 @@
 #include "LibLsp/JsonRpc/lsResponseMessage.h"
 #include "LibLsp/lsp/lsMarkedString.h"
 #include "LibLsp/lsp/lsTextDocumentPositionParams.h"
+#include "../ProjConfig.h"
 
-extern  void __declspec(dllexport) Reflect(Reader& visitor, 
+extern  void LSP_EXPORT Reflect(Reader& visitor, 
 	std::pair<boost::optional<std::string>, boost::optional<MarkupContent>>& value);
 
 

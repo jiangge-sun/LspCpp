@@ -6,7 +6,7 @@ INCLUDES=-I. -ILibLsp/lsp/extention/jdtls/ -ILibLsp/JsonRpc/ -ILibLsp/JsonRpc/ls
 CXXFLAGS = -std=c++17
 OPTFLAGS = -O3
 
-ALL_CXXFLAGS = $(CFLAGS) $(CXXFLAGS) $(CPPFLAGS) $(INCLUDES) $(OPTFLAGS)
+ALL_CXXFLAGS = $(CFLAGS) $(CXXFLAGS) $(CPPFLAGS) $(INCLUDES) $(OPTFLAGS) -fPIC
 
 NETWORKS_DETAIL = $(addprefix detail/, uri_advance_parts.o \
 	uri_normalize.o uri_parse.o uri_parse_authority.o uri_resolve.o)
@@ -24,10 +24,13 @@ OFILES = $(addprefix ./network/,$(NETWORK_FILES)) \
 
 HEADERS = $(shell find ./LibLsp ./network -regex ".*\.\(h\|hpp\)")
 
-default: liblspcpp.a headers.tar.gz
+default: liblspcpp.a liblspcpp.so headers.tar.gz
 
 liblspcpp.a: $(OFILES)
 	ar -r $@ $^
+
+liblspcpp.so: $(OFILES)
+	$(CXX) -shared -fPIC -o $@ $^
 
 headers.tar.gz: $(HEADERS) macro_map.h
 	tar -czf $@ $^
@@ -37,4 +40,4 @@ headers.tar.gz: $(HEADERS) macro_map.h
 
 clean:
 	find ./ -name *.o | xargs rm -rf
-	rm -rf *.a *.tar.gz
+	rm -rf liblspcpp.a headers.tar.gz

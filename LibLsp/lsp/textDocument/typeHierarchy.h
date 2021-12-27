@@ -5,6 +5,7 @@
 #include "LibLsp/lsp/lsTextDocumentPositionParams.h"
 #include "LibLsp/lsp/symbol.h"
 #include "LibLsp/lsp/lsAny.h"
+#include "../ProjConfig.h"
 /**
 	 * The {@code textDocument/typeHierarchy} request is sent from the client to the
 	 * server to retrieve a {@link TypeHierarchyItem type hierarchy item} based on
@@ -35,10 +36,10 @@ enum class TypeHierarchyDirection :  uint32_t{
 	  */
 	  Both=2
 };
-void __declspec(dllexport) Reflect(Reader& reader, TypeHierarchyDirection& value);
+void LSP_EXPORT Reflect(Reader& reader, TypeHierarchyDirection& value);
 
 
-void __declspec(dllexport) Reflect(Writer& writer, TypeHierarchyDirection& value);
+void LSP_EXPORT Reflect(Writer& writer, TypeHierarchyDirection& value);
 
 struct TypeHierarchyParams :public lsTextDocumentPositionParams
 {

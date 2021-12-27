@@ -4,6 +4,7 @@
 #include "LibLsp/lsp/lsAny.h"
 #include "lsClientCapabilities.h"
 #include "LibLsp/lsp/workspace/workspaceFolders.h"
+#include "../ProjConfig.h"
 
 struct ClientInfo {
 	std::string name;
@@ -96,10 +97,10 @@ struct lsInitializeParams {
       trace, workspaceFolders, locale)
 };
 
-void __declspec(dllexport) Reflect(Reader& reader, lsInitializeParams::lsTrace& value);
+void LSP_EXPORT Reflect(Reader& reader, lsInitializeParams::lsTrace& value);
 
 
-void __declspec(dllexport) Reflect(Writer& writer, lsInitializeParams::lsTrace& value);
+void LSP_EXPORT Reflect(Writer& writer, lsInitializeParams::lsTrace& value);
 
 
 MAKE_REFLECT_STRUCT(lsInitializeParams,

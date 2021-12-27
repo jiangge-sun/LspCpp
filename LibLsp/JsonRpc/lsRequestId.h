@@ -2,6 +2,7 @@
 
 #include "LibLsp/JsonRpc/serializer.h"
 
+#include "../ProjConfig.h"
 struct lsRequestId {
 	// The client can send the request id as an int or a string. We should output
 	// the same format we received.
@@ -44,8 +45,8 @@ struct lsRequestId {
 		return  k_string < rhs.k_string;
 	}
 };
-void __declspec(dllexport) Reflect(Reader& visitor, lsRequestId& value);
-void __declspec(dllexport) Reflect(Writer& visitor, lsRequestId& value);
+void LSP_EXPORT Reflect(Reader& visitor, lsRequestId& value);
+void LSP_EXPORT Reflect(Writer& visitor, lsRequestId& value);
 
 // Debug method to convert an id to a string.
 std::string ToString(const lsRequestId& id);

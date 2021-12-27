@@ -9,8 +9,9 @@
 #include "InitializeParams.h"
 #include "LibLsp/lsp/textDocument/SemanticTokens.h"
 
+#include "../ProjConfig.h"
 
-extern void __declspec(dllexport) Reflect(Reader&, std::pair<boost::optional<lsTextDocumentSyncKind>, boost::optional<lsTextDocumentSyncOptions> >&);
+extern void LSP_EXPORT Reflect(Reader&, std::pair<boost::optional<lsTextDocumentSyncKind>, boost::optional<lsTextDocumentSyncOptions> >&);
 
 /**
  * Code Action options.

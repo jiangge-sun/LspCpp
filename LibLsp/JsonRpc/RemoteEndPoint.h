@@ -13,6 +13,7 @@
 #include "LibLsp/JsonRpc/MessageJsonHandler.h"
 #include "Endpoint.h"
 
+#include "../ProjConfig.h"
 
 class MessageJsonHandler;
 class  Endpoint;
@@ -91,7 +92,7 @@ namespace lsp {
 }
 
 
-class __declspec(dllexport) RemoteEndPoint :MessageIssueHandler
+class LSP_EXPORT RemoteEndPoint :MessageIssueHandler
 {
 
 	template <typename F, int N>

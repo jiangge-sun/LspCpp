@@ -1,8 +1,10 @@
 #pragma once
 
 #include "LibLsp/JsonRpc/MessageJsonHandler.h"
+#include "../ProjConfig.h"
+
 namespace lsp {
-	class __declspec(dllexport) ProtocolJsonHandler : public MessageJsonHandler
+	class LSP_EXPORT ProtocolJsonHandler : public MessageJsonHandler
 	{
 	public:
 		ProtocolJsonHandler();

@@ -9,6 +9,7 @@
 #include "RemoteEndPoint.h"
 #include "stream.h"
 #include "threaded_queue.h"
+#include "../ProjConfig.h"
 
 namespace lsp {
     class Log;
@@ -20,7 +21,7 @@ namespace lsp
 
    
 		
-        class __declspec(dllexport) websocket_stream_wrapper :public istream, public ostream
+        class LSP_EXPORT websocket_stream_wrapper :public istream, public ostream
         {
         public:
 
@@ -55,7 +56,7 @@ namespace lsp
         };
 
         /// The top-level class of the HTTP server.
-        class __declspec(dllexport) WebSocketServer
+        class LSP_EXPORT WebSocketServer
         {
         public:
             WebSocketServer(const WebSocketServer&) = delete;

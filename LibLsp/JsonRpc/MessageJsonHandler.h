@@ -3,6 +3,8 @@
 #include <map>
 #include <functional>
 #include <LibLsp/JsonRpc/message.h>
+#include "../ProjConfig.h"
+
 class Reader;
 
 
@@ -10,7 +12,7 @@ using  GenericRequestJsonHandler = std::function< std::unique_ptr<LspMessage>(Re
 using  GenericResponseJsonHandler = std::function< std::unique_ptr<LspMessage>(Reader&) >;
 using  GenericNotificationJsonHandler = std::function< std::unique_ptr<LspMessage>(Reader&) >;
 
-class __declspec(dllexport) MessageJsonHandler
+class LSP_EXPORT MessageJsonHandler
 {
 public:
 	std::map< std::string, GenericRequestJsonHandler > method2request;

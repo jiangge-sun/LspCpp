@@ -3,6 +3,9 @@
 #include "LibLsp/JsonRpc/serializer.h"
 #include <string>
 #include "LibLsp/JsonRpc/message.h"
+
+#include "../ProjConfig.h"
+
 namespace lsp
 {
 	struct Any
@@ -78,8 +81,8 @@ namespace lsp
 };
 
 
-extern void __declspec(dllexport) Reflect(Reader& visitor, lsp::Any& value);
-extern  void __declspec(dllexport) Reflect(Writer& visitor, lsp::Any& value);
+extern void LSP_EXPORT Reflect(Reader& visitor, lsp::Any& value);
+extern  void LSP_EXPORT Reflect(Writer& visitor, lsp::Any& value);
 
 template <typename T>
 void ReflectMember(std::map < std::string, lsp::Any>& visitor, const char* name, T& value) {
